@@ -48,6 +48,18 @@
             android:text="@string/three" />
 
         <Button
+            android:id="@+id/divide"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/divide" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+
+        <Button
             android:id="@+id/button4"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
@@ -60,11 +72,6 @@
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:text="@string/five" />
-    </LinearLayout>
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content" >
 
         <Button
             android:id="@+id/button6"
@@ -72,6 +79,19 @@
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:text="@string/six" />
+
+        <Button
+            android:id="@+id/times"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/times" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
 
         <Button
             android:id="@+id/button7"
@@ -100,12 +120,11 @@
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:text="@string/zero" />
-    </LinearLayout>
 
+    </LinearLayout>
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content" >
-
+        android:layout_height="wrap_content">
         <Button
             android:id="@+id/plus"
             android:layout_width="0dp"
@@ -133,20 +152,6 @@
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:text="@string/clear" />
-
-        <Button
-            android:id="@+id/times"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:text="@string/times" />
-
-        <Button
-            android:id="@+id/divide"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:text="@string/divide" />
 
         <Button
             android:id="@+id/dot"
