@@ -10,3 +10,7 @@ Activity と Fragment
 
 3. ライフサイクルのコールバックメソッドの呼び出し順
 
+1. onCreate()
+2. onStart()
+3. onResume()
+

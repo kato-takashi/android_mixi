@@ -11,9 +11,11 @@ import android.widget.TextView;
  * TODO: 課題2
  * 画面回転や、他のアプリ・画面の起動等で、状態遷移が起こると、それ以前の状態で持っていたデータが失われてしまいます。
  * これを防ぐため、この Activity の中で状態管理をしてください。
+ *
  * @author keishin.yokomaku
  */
 public class SubActivity extends Activity implements TextWatcher {
+    private String saveStr;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         // Hint: 状態遷移が何も起こっていない場合は、savedInstanceState は null です
@@ -34,6 +36,8 @@ public class SubActivity extends Activity implements TextWatcher {
     @Override
     protected void onRestoreInstanceState(Bundle savedInstanceState) {
         super.onRestoreInstanceState(savedInstanceState);
+        EditText text = (EditText) findViewById(R.id.Editor);
+        text.setText(savedInstanceState.getString(saveStr));
     }
 
     /**
@@ -42,6 +46,7 @@ public class SubActivity extends Activity implements TextWatcher {
     @Override
     protected void onSaveInstanceState(Bundle outState) {
         super.onSaveInstanceState(outState);
+        outState.putString("saveStr", saveStr);
     }
 
     @Override
@@ -52,10 +57,12 @@ public class SubActivity extends Activity implements TextWatcher {
     }
 
     @Override
-    public void afterTextChanged(Editable s) {}
+    public void afterTextChanged(Editable s) {
+    }
 
     @Override
-    public void beforeTextChanged(CharSequence s, int start, int count, int after) {}
+    public void beforeTextChanged(CharSequence s, int start, int count, int after) {
+    }
 
     @Override
     public void onTextChanged(CharSequence s, int start, int before, int count) {
